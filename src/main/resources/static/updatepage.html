@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta chatsert="UTF-8">
+    <title>Update Inventory</title>
+    <!-- <script src="Updatepage.js"></script> -->
+</head>
+
+<script>
+
+function validateForm() {
+	  var x = document.forms["fetchdata"]["username"].value;
+	  if (x == "") {
+	    alert("Name must be filled out");
+	    return false;
+	  }
+	}
+</script>
+
+<style>
+
+ body {
+    background-image: url('Images/background.jpg');
+    background-size: cover; /* Optional: This property ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Optional: This property prevents the image from repeating */
+    /* Additional properties such as background-position can be used to position the image */
+  } 
+  
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.quantity {
+  display: flex;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.input-box {
+  width: 40px;
+  text-align: center;
+  border: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Hide the number input spin buttons */
+.input-box::-webkit-inner-spin-button,
+.input-box::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-box[type="number"] {
+  -moz-appearance: textfield;
+}
+  
+  
+</style>
+
+  
+ <script type="text/javascript">
+ 
+ function validateForm() {
+	  var x = document.forms["fetchdata"]["username"].value;
+	  if (x == "") {
+	    alert("Name must be filled out");
+	    return false;
+	  }
+	}
+ </script> 
+  
+<body>
+
+ <div style="text-align:center"><h2> Update your Inventory </h2> </div>
+ <br><br><br>
+ 
+ <form action="/fetchuserqty">
+  <label for="name">Name</label><div></div>
+  <input type="text" id="name" name="username" value=""><br>
+  
+  <div class="quantity">
+  <!-- <button class="minus" aria-label="Decrease">&minus;</button> -->
+  <input type="number" class="input-box" name="qty" value="1" min="1" max="10"><div></div>
+  <!-- <button class="plus" aria-label="Increase">&plus;</button> -->
+</div><br>
+  
+  <input onclick="validateForm" type="submit" value="Submit">
+</form> 
+
+
+</body>
+</html>

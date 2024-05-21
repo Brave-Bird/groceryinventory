@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Inventory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px; /* Increase padding for better spacing */
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Add spacing between nested tables */
+        table table {
+            margin: 10px 0; /* Adjust margin as needed */
+        }
+        
+        .button-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #3498db;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000; /* Ensure it's above other content */
+        }
+
+        .button-container a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .button-container a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+<div class="button-container">
+    <a href="/">Home</a>
+    <a href="/getstockReport">Stock Report</a>
+</div>
+
+<div class="container">
+    <h1>Grocery Inventory</h1>
+    <table id="inventoryTable">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>UserName</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iterate over the outer LinkedHashMap -->
+            <tr th:each="outerEntry : ${hashmap}">
+                <!-- Get the outer key -->
+                <td th:text="${outerEntry.key}"></td>
+                <!-- Iterate over the inner LinkedHashMap for the current outer entry -->
+                <td>
+                    <table>
+                        <!-- Iterate over the inner LinkedHashMap -->
+                        <tr th:each="innerEntry : ${outerEntry.value}">
+                            <!-- Get the inner key -->
+                             <td th:text="${innerEntry.key}"></td> 
+                            <!-- Get the inner value -->
+                            <td th:text="${innerEntry.value}"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

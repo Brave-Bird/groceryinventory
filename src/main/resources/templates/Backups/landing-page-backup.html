@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta chatsert="UTF-8">
+    <title>Inventory</title>
+</head>
+<body>
+
+<style>
+
+ body {
+    background-image: url('Images/background.jpg');
+    background-size: cover; /* Optional: This property ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Optional: This property prevents the image from repeating */
+    /* Additional properties such as background-position can be used to position the image */
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  img {
+    max-width: 280;
+    max-height:200;
+    float: left;
+  }
+  
+  .text {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 10%;
+    float: left;
+  }
+  </style>
+  
+  
+   <div style="text-align:center"><h2> Welcome to your Grocery Inventory </h2> </div>
+   
+   <p style="text-align:left;"><br>
+   
+   
+   <!-- <div class="container"><div class="image"><img src="Images/ToorDal.jpeg" alt="Toor Dal" width="300" height="200"></div><div class="text"><a href="getanchortext?at='ToorDal'>Toor Dal</a></div></div>
+   <div class="container"><div class="image"><img src="Images/FriedGram.jpeg" alt="Fried Gram" width="300" height="200"></div><div class="text"><a href="getanchortext?at='FriedGram'>Fried Gram</a></div></div>
+   <div class="container"><div class="image"><img src="Images/ChanaDal.jpeg" alt="Chana Dal" width="300" height="200"></div><div class="text"><a href="getanchortext?at='ChanaDal'>Chana Dal</a></div></div>
+   <div class="container"><div class="image"><img src="Images/Moong.jpeg" alt="Moong" width="300" height="200"></div><div class="text"><a href="getanchortext?at='Moong'>Moong</a></div></div>
+   <div class="container"><div class="image"><img src="Images/UradDal.jpeg" alt="Urad Dal" width="300" height="200"></div><div class="text"><a href="getanchortext?at='UradDal'>Urad Dal</a></div></div>
+    -->
+   <div class="container"><div class="image"><img src="Images/ToorDal.jpeg" alt="Toor Dal" width="300" height="200"></div><div class="text"><a href="/getanchortext?at='ToorDal'">Toor Dal</a></div></div>
+   <div class="container"><div class="image"><img src="Images/FriedGram.jpeg" alt="Fried Gram" width="300" height="200"></div><div class="text"><a href="/getanchortext?at='FriedGram'">Fried Gram</a></div></div>
+   <div class="container"><div class="image"><img src="Images/ChanaDal.jpeg" alt="Chana Dal" width="300" height="200"></div><div class="text"><a href="/getanchortext?at='ChanaDal'">Chana Dal</a></div></div>
+   <div class="container"><div class="image"><img src="Images/Moong.jpeg" alt="Moong" width="300" height="200"></div><div class="text"><a href="/getanchortext?at='Moong'">Moong</a></div></div>
+   <div class="container"><div class="image"><img src="Images/UradDal.jpeg" alt="Urad Dal" width="300" height="200"></div><div class="text"><a href="/getanchortext?at='UradDal'">Urad Dal</a></div></div>
+   
+   </p>
+   
+</body>
+</html>

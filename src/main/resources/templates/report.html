@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Iterating Over LinkedHashMap in HTML</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Grocery Inventory</h1>
+    <table id="inventoryTable">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>UserName</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iterate over the outer LinkedHashMap -->
+            <tr th:each="outerEntry : ${hashmap}">
+                <!-- Get the outer key -->
+                <td th:text="${outerEntry.key}"></td>
+                <!-- Iterate over the inner LinkedHashMap for the current outer entry -->
+                <td>
+                    <table>
+                        <!-- Iterate over the inner LinkedHashMap -->
+                        <tr th:each="innerEntry : ${outerEntry.value}">
+                            <!-- Get the inner key -->
+                            <td th:text="${innerEntry.key}"></td>
+                            <!-- Get the inner value -->
+                            <td th:text="${innerEntry.value}"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

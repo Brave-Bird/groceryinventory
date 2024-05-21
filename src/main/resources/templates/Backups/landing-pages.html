@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta chatsert="UTF-8">
+    <title>Inventory</title>
+</head>
+<body>
+
+<style>
+
+ body {
+    background-image: url('Images/background.jpeg');
+    background-size: cover; /* Optional: This property ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Optional: This property prevents the image from repeating */
+    /* Additional properties such as background-position can be used to position the image */
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  img {
+    max-width: 280;
+    max-height:200;
+    float: left;
+  }
+  
+  .text {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 10%;
+    float: left;
+  }
+  </style>
+  
+  
+   <div style="text-align:center"><h2> Welcome to your Grocery Inventory </h2> </div>
+   
+   <p style="text-align:left;"><br>
+   <div class="container" style="text-align:right"><div class="text"><a href="/getstockReport">STOCK REPORT</a></div></div>
+   
+   <div style="text-align:center">
+   <h4 style="text-align:center">Item List</h4>
+   <ol>
+   <li style="text-align:center"><a type="text" href="/getanchortext?at='ToorDal'">Toor Dal</a></li>
+   <li style="text-align:center"> <a type="text" href="/getanchortext?at='FriedGram'">Fried Gram</a></li>
+   <li style="text-align:center"><a type="text" href="/getanchortext?at='ChanaDal'">Chana Dal</a></li>
+   <li style="text-align:center"><a type="text" href="/getanchortext?at='Moong'">Moong</a></li>
+   <li style="text-align:center"><a type="text" href="/getanchortext?at='UradDal'">Urad Dal</a></li>
+   </ol>
+   </div>
+   
+   
+</body>
+</html>
